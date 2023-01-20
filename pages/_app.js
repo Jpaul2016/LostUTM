@@ -1,14 +1,8 @@
-import React from "react";
-import "./App.css";
-import SearchBar from "./Components/SearchBar";
-import BookData from "./Data.json";
+  import React from "react"; 7.2K (gzipped 2.9K)
+  import ".App.css"; 
 
-function App() {
-  return (
-    <div className="App">
-      <SearchBar placeholder="Enter a Book Name..." data={BookData} />
-    </div>
-  );
-}
+  function App() {
+    return <div className="App"><</div>; 
 
-export default App;
+  }
+export default App; 
