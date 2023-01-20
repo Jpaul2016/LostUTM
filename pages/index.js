@@ -1,16 +1,44 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+# npm
+npm i react-search-box --save
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+# yarn
+yarn add react-search-box
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+import React, { Component } from "react";
+import ReactSearchBox from "react-search-box";
+
+export default class App extends Component {
+  data = [
+    {
+      key: "john",
+      value: "John Doe",
+    },
+    {
+      key: "jane",
+      value: "Jane Doe",
+    },
+    {
+      key: "mary",
+      value: "Mary Phillips",
+    },
+    {
+      key: "robert",
+      value: "Robert",
+    },
+    {
+      key: "karius",
+      value: "Karius",
+    },
+  ];
+
+  render() {
+    return (
+      <ReactSearchBox
+        placeholder="Placeholder"
+        value="Doe"
+        data={this.data}
+        callback={(record) => console.log(record)}
+      />
+    );
+  }
+}
