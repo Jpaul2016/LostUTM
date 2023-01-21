@@ -1,42 +1,21 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import ReactSearchBox from "../src";
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
 
-ReactDOM.render(
-  <React.StrictMode>
-    <ReactSearchBox
-      placeholder="Search for John, Jane or Mary"
-      data={[
-        {
-          key: "john",
-          value: "John Doe",
-        },
-        {
-          key: "jane",
-          value: "Jane Doe",
-        },
-        {
-          key: "mary",
-          value: "Mary Phillips",
-        },
-        {
-          key: "robert",
-          value: "Robert",
-        },
-        {
-          key: "karius",
-          value: "Karius",
-        },
-      ]}
-      onSelect={(record: any) => console.log(record)}
-      onFocus={() => {
-        console.log("This function is called when is focussed");
-      }}
-      onChange={(value) => console.log(value)}
-      autoFocus
-      leftIcon={<>🎨</>}
-      iconBoxSize="48px"
-    />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+    <div id="mydiv"></div>
+
+    <script type="text/babel">
+      function Hello() {
+        return <h1>Hello World!</h1>;
+      }
+      
+      ReactDOM.render(<Hello />, document.getElementById('mydiv'))
+    </script>
+
+  </body>
+</html>
